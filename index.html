@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Miss Barchinoy Library</title>
+<meta name="theme-color" content="#1f1224">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="uslub.css">
+</head>
+<body>
+<canvas id="sahna"></canvas>
+<div id="vinyetka"></div>
+
+<header id="yuqori" hidden>
+  <div class="belgi"><span class="belgi-yurak">♥</span><span id="belgi-matn"></span></div>
+  <div class="tugmalar">
+    <button id="sayohat-tugma" class="tabletka">
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg>
+      Sayohat
+    </button>
+    <button id="musiqa-tugma" class="doira" aria-label="Musiqa" hidden></button>
+    <button id="yordam-tugma" class="doira" aria-label="Qanday yuriladi">?</button>
+  </div>
+</header>
+
+<div id="maslahat" class="maslahat"></div>
+
+<div id="joystik" hidden><div id="joystik-tugma"></div></div>
+
+<section id="panel" class="panel" hidden>
+  <div class="panel-raqam"><span id="panel-raqam">01</span><small>/ 20</small></div>
+  <div id="panel-matn" class="panel-matn">
+    <h2 id="panel-sarlavha"></h2>
+    <p id="panel-izoh"></p>
+  </div>
+  <div class="panel-tugmalar">
+    <button id="oldingi" class="doira" aria-label="Oldingi rasm">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M14.5 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button id="keyingi" class="doira katta" aria-label="Keyingi rasm">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9.5 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button id="yopish" class="doira" aria-label="Yopish">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</section>
+
+<div id="kirish" class="parda">
+  <div class="chipta">
+    <div class="chipta-asosiy">
+      <p class="chipta-ust"><span>Kirish chiptasi</span><span class="chipta-yurak">♥</span></p>
+      <h1 id="chipta-nom"></h1>
+      <p id="chipta-matn" class="chipta-matn"></p>
+      <dl class="chipta-maydonlar">
+        <div><dt>Mehmon</dt><dd id="chipta-ism"></dd></div>
+        <div><dt>Sana</dt><dd id="chipta-sana"></dd></div>
+        <div><dt>Narxi</dt><dd>Bebaho</dd></div>
+      </dl>
+      <p id="yuklanish" class="yuklanish"></p>
+    </div>
+    <div class="chipta-qirqim">
+      <p class="qirqim-raqam">№ 0001</p>
+      <div class="shtrix" aria-hidden="true"></div>
+      <button id="kirish-tugma" class="asosiy-tugma">Kirish</button>
+      <p class="qirqim-izoh">1 kishilik</p>
+    </div>
+  </div>
+</div>
+
+<div id="yakun" class="parda" hidden>
+  <div class="maktub">
+    <p class="maktub-ust">Kutubxonaning so‘nggi xonasi</p>
+    <h2 id="yakun-sarlavha"></h2>
+    <p id="yakun-matn"></p>
+    <p id="yakun-imzo" class="imzo"></p>
+    <div class="maktub-tugmalar">
+      <button id="yakun-boshidan" class="ikkinchi-tugma">Boshidan ko‘rish</button>
+      <button id="yakun-yopish" class="asosiy-tugma">Kutubxonada qolish</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="muzey.js"></script>
+</body>
+</html>
